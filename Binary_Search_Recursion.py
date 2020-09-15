@@ -12,8 +12,8 @@ def binary_search(arr, element, lower, upper):
             return binary_search(arr, element, middle + 1, upper)
 
 
-def binary_search_wrapper(a, x):
-    return binary_search(a, x, 0, len(a) - 1)
+def binary_search_wrapper(arr, element):
+    return binary_search(arr, element, 0, len(arr) - 1)
 
 
-print(binary_search_wrapper([1, 34, 54, 129, 299], 345))
+print(binary_search_wrapper(arr=[1, 34, 54, 129, 299], element=1))
