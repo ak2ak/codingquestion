@@ -9,12 +9,12 @@ def buy_sell_stock(nums):
             price-min_price
         )
         profit_so_far[i] = maximum_profit_till_now
-    max_price_so_far = float('-inf')
+    maximum_profit = float('-inf')
     for i, price in reversed(list(enumerate(nums[1:], 1))):
-        max_price_so_far = max(max_price_so_far, price)
+        maximum_profit = max(maximum_profit, price)
         maximum_profit_till_now = max(
             maximum_profit_till_now,
-            max_price_so_far - price + profit_so_far[i-1]
+            maximum_profit - price + profit_so_far[i-1]
         )
     return maximum_profit_till_now
 
